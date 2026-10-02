@@ -1,4 +1,13 @@
-﻿
+﻿/*
+*  Name:       Jonathan River Phillips
+*  Course:     CSCI 1250, Section 002
+*  Assignment: Lab 03: The Badge Office
+*  Date:       October 2, 2026
+*  Description:Builds a student from a name, two random assignments, 
+* and the walking distance to the first class
+*/
+
+//Part 1: The Name
 using System.Globalization;
 using System.Runtime.Intrinsics.X86;
 
@@ -30,7 +39,7 @@ System.Console.WriteLine("Initials: " + Convert.ToString(firstInitial).ToUpper()
 
 System.Console.WriteLine("Letters in last name: " + CharacterCount );
 
-//moving onto Part 2 
+//moving onto Part 2: The Numbers
 
 Random rng = new Random(); 
 
@@ -41,7 +50,7 @@ int LockerNumber = Convert.ToInt32(rng.Next(1, 501));
 System.Console.WriteLine("Student ID: " + StudentID );
 System.Console.WriteLine("Locker: " + LockerNumber);
 
-//Moving onto Part 3 
+//Moving onto Part 3: The Walk
 
 System.Console.WriteLine("What is the Dorms (x)? ");
 int DormX = Convert.ToInt32(Console.ReadLine());
@@ -71,7 +80,7 @@ System.Console.WriteLine("Distance: " + Distance.ToString("F1"));
 
 System.Console.WriteLine("Walking time: " + WalkingFinalTime + " minutes " + WalkingRemainder + " seconds"); 
 
-// Move onto Part 4 
+// Move onto Part 4: The Badge
 
 int CheckDigit = StudentID % 9; 
 
@@ -86,5 +95,5 @@ System.Console.WriteLine("ID " + Convert.ToString(StudentID).PadLeft(13) + "-" +
 //System.Console.WriteLine("ID " + StudentID + "-" + StudentID % 9 );
 System.Console.WriteLine("LOCKER " + Convert.ToString(LockerNumber).PadLeft(6));
 
-System.Console.WriteLine("Walk: " + Convert.ToString(WalkingFinalTime).PadLeft(5) + " min " + WalkingRemainder + " sec");
+System.Console.WriteLine("Walk " + Convert.ToString(WalkingFinalTime).PadLeft(6) + " min " + WalkingRemainder + " sec");
 System.Console.WriteLine("==================================");
